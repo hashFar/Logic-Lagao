@@ -147,15 +147,7 @@ function Scripts(props) {
               {filter} {getCount(filter)}
             </button>
           ))}
-        </div>
 
-        <input
-          type="text"
-          placeholder="Search scripts"
-          value={props.search}
-          onChange={(e) => props.setSearch(e.target.value)}
-        />
-      </div>
 
       <div className="scripts-list">
         {filteredScripts.length > 0 ? (
