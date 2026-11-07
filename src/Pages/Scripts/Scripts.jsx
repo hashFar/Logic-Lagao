@@ -147,7 +147,9 @@ function Scripts(props) {
               {filter} {getCount(filter)}
             </button>
           ))}
+        </div>
 
+      </div>
 
       <div className="scripts-list">
         {filteredScripts.length > 0 ? (
