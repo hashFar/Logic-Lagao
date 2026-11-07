@@ -1,0 +1,15 @@
+
+@import "../AddScriptModal/AddScriptModal.css";
+
+/* Secondary action button */
+
+.add-script-modal .modal-actions button:first-child {
+  background: #FFFFFF;
+  color: #737373;
+  border: 1px solid #E5E5E5;
+}
+
+.add-script-modal .modal-actions button:first-child:hover {
+  background: #F5F5F5;
+  color: #171717;
+}

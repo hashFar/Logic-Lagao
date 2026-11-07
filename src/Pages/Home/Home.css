@@ -1,0 +1,286 @@
+
+.home-container {
+  max-width: 1120px;
+  margin: auto;
+  padding: 56px 24px 72px;
+  color: #171717;
+}
+
+/* Home heading */
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.home-header h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  margin: 0;
+}
+
+.home-header p {
+  color: #737373;
+  font-size: 14px;
+  margin: 8px 0 0;
+}
+
+/* Primary button */
+
+.primary-button {
+  background-color: #171717;
+  color: #FFFFFF;
+  border: 1px solid #171717;
+  border-radius: 8px;
+  padding: 12px 18px;
+  min-height: 44px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.primary-button:hover {
+  background-color: #383838;
+  transform: translateY(-1px);
+}
+
+/* Status counts */
+
+.status-counts {
+  display: flex;
+  gap: 64px;
+  margin-top: 40px;
+  margin-bottom: 52px;
+}
+
+.status-item p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #737373;
+  font-size: 13px;
+  margin: 0 0 4px;
+}
+
+.status-item h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin: 0;
+  color: #171717;
+}
+
+/* Status dots */
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.not-approved {
+  background-color: #B45309;
+}
+
+.approved {
+  background-color: #2563EB;
+}
+
+.done {
+  background-color: #15803D;
+}
+
+.rejected {
+  background-color: #B91C1C;
+}
+
+/* Recent scripts */
+
+.recent-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.recent-header h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.recent-header a,
+.archive-reminder a {
+  color: #525252;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.recent-header a:hover,
+.archive-reminder a:hover {
+  color: #171717;
+  text-decoration: underline;
+}
+
+.script-row {
+  min-height: 68px;
+  border-top: 1px solid #EAEAEA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.script-row:last-child {
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.script-row:hover {
+  background-color: #FAFAFA;
+}
+
+.script-row h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: #171717;
+}
+
+.script-row p {
+  font-size: 13px;
+  color: #858585;
+  margin: 0;
+}
+
+.script-status {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.script-status::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.blue::before {
+  background-color: #2563EB;
+}
+
+.orange::before {
+  background-color: #B45309;
+}
+
+.green::before {
+  background-color: #15803D;
+}
+
+.red::before {
+  background-color: #B91C1C;
+}
+
+/* Archive reminder */
+
+.archive-reminder {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #737373;
+}
+
+.archive-reminder button,
+.recent-header button {
+  background: none;
+  border: none;
+  color: #525252;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.archive-reminder button:hover,
+.recent-header button:hover {
+  color: #171717;
+  text-decoration: underline;
+}
+
+/* Responsive design */
+
+@media (max-width: 700px) {
+  .home-container {
+    padding: 36px 20px 56px;
+  }
+
+  .home-header {
+    align-items: flex-start;
+  }
+
+  .home-header h1 {
+    font-size: 28px;
+  }
+
+  .status-counts {
+    gap: 28px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    margin-bottom: 40px;
+  }
+
+  .status-item h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 450px) {
+  .home-header {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .home-header h1 {
+    font-size: 26px;
+  }
+
+  .status-counts {
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .status-item {
+    min-width: 110px;
+  }
+
+  .script-row {
+    min-height: 72px;
+  }
+
+  .script-row h3 {
+    font-size: 14px;
+  }
+
+  .script-status {
+    font-size: 12px;
+  }
+}

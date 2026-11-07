@@ -1,0 +1,216 @@
+
+.archive-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 56px 24px 72px;
+  color: #171717;
+}
+
+/* Page heading */
+
+.archive-header h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  margin: 0 0 8px;
+}
+
+.archive-header p {
+  color: #737373;
+  font-size: 14px;
+  margin: 0 0 32px;
+}
+
+/* Archive filters */
+
+.archive-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.archive-filters button {
+  min-height: 38px;
+  padding: 0 15px;
+  border: 1px solid #EAEAEA;
+  border-radius: 7px;
+  background: #FFFFFF;
+  color: #737373;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.archive-filters button:hover {
+  border-color: #A3A3A3;
+  color: #171717;
+}
+
+.archive-filters button.selected {
+  background: #171717;
+  color: #FFFFFF;
+  border-color: #171717;
+  font-weight: 600;
+}
+
+/* Archive list */
+
+.archive-list {
+  border: 1px solid #EAEAEA;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #FFFFFF;
+}
+
+.archive-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 1px solid #EEEEEE;
+  background: #FFFFFF;
+  transition: background-color 0.2s ease;
+}
+
+.archive-row:hover {
+  background-color: #FAFAFA;
+}
+
+.archive-row:last-child {
+  border-bottom: none;
+}
+
+/* Script information */
+
+.archive-info h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 6px;
+  color: #171717;
+}
+
+.archive-info p {
+  font-size: 13px;
+  color: #858585;
+  margin: 0;
+}
+
+/* Archive actions */
+
+.archive-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.days-left {
+  font-size: 12px;
+  color: #737373;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.days-left.warning {
+  color: #DC2626;
+}
+
+/* Action buttons */
+
+.restore-button,
+.delete-button,
+.delete-confirm button {
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 7px;
+  border: 1px solid #E5E5E5;
+  background: #FFFFFF;
+  color: #525252;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.restore-button:hover {
+  background: #F5F5F5;
+  border-color: #D4D4D4;
+}
+
+.delete-button,
+.delete-confirm button:first-of-type {
+  color: #DC2626;
+  border-color: #FECACA;
+}
+
+.delete-button:hover,
+.delete-confirm button:first-of-type:hover {
+  background: #FEF2F2;
+  border-color: #FCA5A5;
+}
+
+/* Delete confirmation */
+
+.delete-confirm {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #525252;
+}
+
+.delete-confirm button:last-of-type {
+  color: #525252;
+}
+
+/* Empty state */
+
+.archive-empty {
+  padding: 40px 20px;
+  text-align: center;
+  color: #858585;
+  font-size: 14px;
+}
+
+/* Responsive design */
+
+@media (max-width: 700px) {
+  .archive-container {
+    padding: 36px 20px 56px;
+  }
+
+  .archive-header h1 {
+    font-size: 30px;
+  }
+
+  .archive-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .archive-actions {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 450px) {
+  .archive-header h1 {
+    font-size: 26px;
+  }
+
+  .archive-row {
+    padding: 16px;
+  }
+
+  .archive-actions {
+    gap: 8px;
+  }
+
+  .delete-confirm {
+    flex-wrap: wrap;
+  }
+}

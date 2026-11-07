@@ -1,0 +1,52 @@
+.footer {
+  width: 100%;
+  border-top: 1px solid #EAEAEA;
+  background-color: #FFFFFF;
+}
+
+.footer-container {
+  max-width: 1120px;
+  min-height: 76px;
+  margin: auto;
+  padding: 20px 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer p {
+  color: #858585;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* Contact button */
+.footer .a {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #525252;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footer .a:hover {
+  color: #171717;
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 450px) {
+  .footer-container {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    gap: 10px;
+  }
+}
